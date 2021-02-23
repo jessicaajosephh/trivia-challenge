@@ -19,12 +19,16 @@ class CLI
         elsif input == "2"
             goodbye
         else
-            input == not_valid
+            not_valid
         end
     end
 
     def goodbye
         puts "Wasn't feeling it? That's okay come back another time, Goodbye!"
+    end
+
+    def not_valid
+        puts "Hmmm I'm not getting that, please try again."
     end
     
         
