@@ -34,6 +34,11 @@ class CLI
 
     def not_valid
         puts "Hmmm I'm not getting that, please try again."
+        menu
+    end
+
+    def start_test
+
     end
     
         
