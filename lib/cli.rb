@@ -1,5 +1,9 @@
 class CLI
 
+    def initialize
+        API.new.get_challenge_questions
+    end
+
     def call
         greeting
         menu
