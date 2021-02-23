@@ -7,9 +7,30 @@ class CLI
 
     def greeting
         puts "Hello, welcome to the Trivia Challenge!"
-        puts "To begin the challenge, enter 'begin'"
-        puts "If you're not up for the challenge, enter 'exit'"
+        puts "If you're ready for the challenge, enter '1'"
+        puts "If you're not up for the challenge, enter '2'"
     end
+
+    def menu
+        input = gets.to_i
+
+        if input == "1"
+            begin_test
+        elsif input == "2"
+            goodbye
+        else
+            input == not_valid
+        end
+    end
+
+    def goodbye
+        puts "Wasn't feeling it? That's okay come back another time, Goodbye!"
+    end
+    
+        
+        
+
+
 
 
 end
