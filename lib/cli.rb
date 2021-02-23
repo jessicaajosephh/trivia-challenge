@@ -7,16 +7,17 @@ class CLI
 
     def greeting
         puts "Hello, welcome to the Trivia Challenge!"
-        puts "If you're ready for the challenge, enter '1'"
-        puts "If you're not up for the challenge, enter '2'"
+        puts "If you're ready for the challenge, enter 'start'"
+        puts "If you're not up for the challenge, enter 'exit'"
     end
 
     def menu
-        input = gets.to_i
+        input = gets.strip.downcase
 
-        if input == "1"
-            begin_test
-        elsif input == "2"
+        if input == "start"
+            puts "Okay here we go!"
+            start_test
+        elsif input == "exit"
             goodbye
         else
             not_valid
@@ -24,7 +25,7 @@ class CLI
     end
 
     def goodbye
-        puts "Wasn't feeling it? That's okay come back another time, Goodbye!"
+        puts "Wasn't feeling it? That's okay, come back another time. Goodbye!"
     end
 
     def not_valid
